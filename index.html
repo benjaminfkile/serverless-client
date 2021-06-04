@@ -3,17 +3,22 @@
 <head>
   <title>ELM Serverless Chat</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
   <script>
     window.apiBaseUrl = 'https://elmsigr-fn.azurewebsites.net';
   </script>
   <style>
     .slide-fade-enter-active, .slide-fade-leave-active {
-      transition: all 1s ease;
+      transition: all .5s ease;
     }
     .slide-fade-enter, .slide-fade-leave-to {
       height: 0px;
       overflow-y: hidden;
       opacity: 0;
+    }
+    #chat-logo{
+      font-size: 64px;
+      color: #007bff;
     }
   </style>
 </head>
@@ -22,7 +27,7 @@
   <p>&nbsp;</p>
   <div id="app" class="container">
     <h3>
-      <img src="https://raw.githubusercontent.com/Azure/azure-functions-cli/master/src/Azure.Functions.Cli/npm/assets/azure-functions-logo-color-raster.png" height="68px" width="68px" role="presentation" data-linktype="external">
+      <span id="chat-logo" class="material-icons">chat</span>
       &nbsp;&nbsp;ELM Serverless Chat&nbsp;&nbsp;
     </h3>
     <div class="row" v-if="ready">
