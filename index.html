@@ -89,10 +89,10 @@
 
     // const apiBaseUrl = prompt('Enter the Azure Function app base URL', window.apiBaseUrl);
 
-    data.username = prompt("Enter your username");
+    data.username = prompt("Enter your name");
     if (!data.username) {
-      alert("No username entered. Reload page and try again.");
-      throw "No username entered";
+      alert("No name entered. Reload page and try again.");
+      throw "No name entered";
     }
 
     const connection = new signalR.HubConnectionBuilder()
