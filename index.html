@@ -97,6 +97,7 @@
 
     const connection = new signalR.HubConnectionBuilder()
       .withUrl(`${apiBaseUrl}/api`)
+      .withAutomaticReconnect()
       .configureLogging(signalR.LogLevel.Information)
       .build();
 
